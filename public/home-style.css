@@ -1,0 +1,107 @@
+.container-div {
+  display: flex;
+  background-color: #4a9d98;
+}
+
+::placeholder {
+  color: white;
+  opacity: 0.4;
+}
+
+.form-control::-webkit-input-placeholder {
+  color: white !important;
+}
+
+#img-div {
+  width: 50%;
+  height: 100%;
+  float: right;
+  margin: 0;
+}
+
+#img-div > img {
+  width: 100%;
+  height: 100%;
+}
+.info-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+}
+
+#logo-div {
+  display: flex;
+  align-items: center;
+  margin-top: 100px;
+  width: 80%;
+  justify-content: center;
+}
+
+.form-div {
+  padding: 20px;
+  width: 80%;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-size: 15px;
+  color: white;
+}
+
+#name {
+  font-family: "Roboto";
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid white;
+  outline: none;
+  margin-bottom: 25px;
+}
+
+#titleText {
+  font-family: "Roboto";
+  font-weight: 100;
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.form-control {
+  background: none !important;
+  color: white !important;
+}
+
+.form-group textarea {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  font-weight: 100;
+}
+
+textarea:focus {
+  outline: 0;
+}
+
+#time {
+  margin-bottom: 25px;
+}
+.label {
+  font-weight: 100;
+}
+
+#submit-button {
+  background-color: #1d5460;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: lighter;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 150px;
+}

@@ -1,0 +1,99 @@
+<% include header %>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1 id="title">
+        START WRITING <br />
+        YOUR IDEAS HERE
+      </h1>
+      <button id="end_btn" onclick="copyAndSend()">End session</button>
+    </div>
+    <div id="background">
+      <div id="leftContainer">
+        <div id="writeArea">
+          <form
+            id="send-container"
+            method="POST"
+            class="form-group shadow-textarea"
+          >
+            <textarea
+              id="message-input"
+              class="form-control z-depth-1"
+              cols="30"
+              rows="10"
+              placeholder="My genius idea is.."
+              style="overflow: scroll; word-wrap: break-word;  height: 200px;"
+            ></textarea>
+            <button type="submit" id="send-button">
+              Press to be ready
+            </button>
+          </form>
+
+          <table id="tableUsers">
+            <tr id="tr1">
+              <th>User:</th>
+              <th>Status:</th>
+            </tr>
+          </table>
+        </div>
+
+        <div class="input-group" id="imageDiv">
+          <label for="search" id="img-text">SEARCH FOR INSPIRATION</label>
+          <input
+            type="text"
+            placeholder="Search for inspiration here.."
+            name="search"
+            id="search"
+            required
+          />
+          <button
+            onclick="searchPhotos()"
+            class="btn btn-default"
+            type="submit"
+            id="imgBtn"
+          >
+            <i id="search-icon" class="glyphicon glyphicon-search"></i>
+            <i id="load-icon" class="fa fa-spinner fa-spin"> </i>
+          </button>
+          <div class="resultDiv" id="result"></div>
+        </div>
+
+        <!-- Hidden form -->
+        <form
+          id="hidden_form"
+          method="POST"
+          action="/end-page"
+          style="display: none"
+        >
+          <textarea
+            name="user_idea"
+            id="hidden_textarea"
+            cols="30"
+            rows="10"
+          ></textarea>
+          <button id="hidden_btn" type="submit"></button>
+        </form>
+      </div>
+
+      <div id="rightContainer">
+        <div id="briefANDclock">
+          <div id="brief" class="card shadow-textarea">
+            <h3 id="sesh-brief"><%= session_name %></h3>
+            <p id="sesh-text" class="card-body"><%= session_brief %></p>
+          </div>
+
+          <div id="clock" class="card shadow-textarea">
+            <p id="countdown" class="card-body"></p>
+            <button id="mixButton" class="btn btn-light btn-lg">
+              Start time
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script defer src="/script.js"></script>
+</body>
+
+<% include footer %>

@@ -1,0 +1,301 @@
+#container {
+  height: 100vh;
+  width: 100%;
+  z-index: -2;
+  box-shadow: inset 0 0 0 100vw rgba(0, 0, 0, 0.63);
+  /*background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  ); */
+  background-image: url(https://cdn.glitch.com/a1887b2c-df5e-4f4c-b470-85e5f90a00e2%2Fcool-background.png?v=1575129218587);
+
+  background-size: cover;
+  transition: background-image 3s;
+  display: flex;
+  flex-direction: column;
+}
+#background {
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  display: flex;
+  flex-direction: row;
+}
+
+#title {
+  margin: 0;
+  margin-top: 40px;
+  padding: 0;
+  font-family: "Roboto";
+  font-size: 50px;
+  color: white;
+  float: left;
+  margin-left: 100px;
+  font-weight: bold;
+}
+#end_btn {
+  background-color: #4a9d98;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: lighter;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 20px;
+  float: right;
+}
+
+#leftContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+  width: 70%;
+  align-items: center;
+  z-index: 2;
+}
+
+#rightContainer {
+  display: flex;
+  align-items: top;
+  width: 30%;
+  flex-direction: column;
+  z-index: 2;
+}
+
+#brief {
+  margin: 10px;
+  padding: 5px;
+  width: 90%;
+  align-items: left;
+  text-align: left;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+}
+#clock {
+  margin: 10px;
+  padding: 5px;
+  width: 250px;
+  height: 250px;
+  padding: 10px;
+  align-items: center;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+  font-family: "Open Sans";
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#writeArea {
+  margin: 10px;
+  padding: 5px;
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+#send-container {
+  flex-direction: column;
+  width: 80%;
+  margin: 10px;
+}
+
+#briefANDclock {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+
+  padding: 5px;
+}
+
+#tableUsers {
+  width: 20%;
+  margin-top: 100px;
+  font-family: "Open Sans";
+  font-size: 10px;
+  margin: 10px;
+}
+
+tr {
+  border-radius: 4px;
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border: 1px solid white;
+  color: white;
+  box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+}
+
+#tr1 {
+  background-color: transparent;
+  color: white;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+#countdown {
+  color: white;
+  font-family: "Roboto";
+  font-size: 50px;
+  font-weight: lighter;
+  margin-top: 30px;
+  border-bottom: 1px solid white;
+}
+
+.shadow-textarea textarea.form-control::placeholder {
+  font-weight: 300;
+}
+.shadow-textarea textarea.form-control {
+  padding-left: 0.8rem;
+}
+
+.btn {
+  font-family: "roboto";
+  font-weight: thin;
+}
+
+#send-button {
+  background-color: #4a9d98;
+  border: none;
+  color: white;
+  padding: 12px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: lighter;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-left: 240px;
+}
+
+#whiteline {
+  height: 1px;
+  width: 180px;
+  background: white;
+}
+
+#mixButton {
+  background-color: #4a9d98;
+  border: none;
+  color: white;
+  padding: 7px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 13px;
+  font-weight: lighter;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 20px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+
+#sesh-brief {
+  margin-top: 10px;
+  font-family: "Roboto";
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: lighter;
+  padding-left: 1.25rem;
+  text-transform: uppercase;
+}
+
+#sesh-text {
+  font-size: 12px;
+  font-family: "Roboto";
+  font-weight: lighter;
+}
+
+#message-input {
+  align-self: flex-end;
+  height: 300px;
+  resize: none;
+  overflow-y: scroll;
+  padding: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background: rgba(255, 255, 255, 0.5);
+  color: white;
+  font-size: 20px;
+}
+
+#imageDiv {
+  display: flex;
+  flex-direction: row;
+  width: 500px;
+  margin-top: 30px;
+  margin-left: -170px;
+}
+
+#search {
+  height: 40px;
+  width: 400px;
+  font-size: 14px;
+  color: black;
+  border-radius: 10px 0px 0px 10px;
+}
+
+#result div {
+  display: none;
+  position: absolute;
+}
+#result div:first-child {
+  display: block;
+}
+
+.image > img {
+  width: 350px;
+  height: 250px;
+  margin: 20px;
+  transform: translate(-280px, 30px);
+  border-radius: 5px;
+}
+
+#img-text {
+  margin-top: 10px;
+  font-family: "Roboto";
+  margin-bottom: 10px;
+  font-size: 30px;
+  font-weight: lighter;
+  color: white;
+  padding-left: 1.25rem;
+  text-transform: uppercase;
+}
+
+#imgBtn {
+  height: 40px;
+}
+
+input::-webkit-input-placeholder {
+  color: black;
+}
+
+input:focus::-webkit-input-placeholder {
+  color: #888;
+}
+::placeholder {
+  color: white;
+  opacity: 0.4;
+}
+
+#message-input::-webkit-input-placeholder {
+  color: white !important;
+  opacity: 0.64;
+}
+
+#load-icon {
+  display: none;
+}

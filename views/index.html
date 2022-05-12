@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <script defer src="/socket.io/socket.io.js"></script>
+    <script defer src="/script.js"></script>
+  </head>
+  <body>
+    <p id="countdown">count</p>
+    <div id="message-container"></div>
+  
+    <form id="send-container">
+      <div id="content-container">
+        <textarea id="ide"></textarea>
+      </div>
+      <textarea id="message-input" cols="30" rows="10"></textarea>
+      <button type="submit" id="send-button">Send</button>
+    </form>
+    <button id="copy-button" onclick="copyText()">
+      Copy
+    </button>
+    
+      <table id="tableUsers">
+      <tr id="tr1">
+          <th>User:</th>
+          <th>Status:</th>
+
+        </tr>
+  </table>  
+    
+  </body>
+</html>

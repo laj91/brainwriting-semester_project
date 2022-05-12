@@ -1,0 +1,50 @@
+<% include header %>
+
+<body>
+  <div id="end-container">
+    <h1 id="end-title">
+      CONGRATULATIONS, YOU LANDED YOUR <br />
+      CREATIVE PROCESS
+    </h1>
+    <h3 id="sesh-title"></h3>
+
+    <div id="idea-container">
+      <% for(let i = 0 ; i < arr.length ; i++) { %>
+
+      <div class="idea">
+        <div class="card-body">
+          <h5 class="idea-title">Ide <%= arr.indexOf(arr[i]) %></h5>
+          <p class="idea-text"><%= arr[i].msg %></p>
+          <button onclick="editDIV(<%= arr.indexOf(arr[i]) %>)" id="edit-btn">
+            Edit idea
+          </button>
+        </div>
+      </div>
+
+      <% } %>
+    </div>
+
+    <button id="print-btn" onclick="printPDF()">Print to PDF</button>
+  </div>
+
+  <script>
+    let title = "<%= name_of_session %>";
+    function printPDF() {
+      var printDoc = new jsPDF();
+      printDoc.setFontSize(24);
+      printDoc.text(20, 20, title);
+
+      printDoc.fromHTML($("#idea-container").get(0), 30, 30, { width: 150 });
+      printDoc.save("document.pdf");
+      //printDoc.output("dataurlnewwindow"); // this opens a new popup,  after this the PDF opens the print window view but there are browser inconsistencies with how this is handled
+    }
+
+    function editDIV(numb) {
+      console.log(numb);
+      let temp = document.getElementsByClassName("card-body");
+      temp[numb].contentEditable = true;
+    }
+  </script>
+</body>
+
+<% include footer %>

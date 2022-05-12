@@ -1,0 +1,70 @@
+<% include header %>
+<body>
+  <div class="container-div">
+    <div class="info-div">
+      <div id="logo-div">
+        <h1 id="titleText">SETUP YOUR SESSION</h1>
+      </div>
+      <div class="form-div">
+        <form name="form1" method="POST" action="/loading" class="form">
+          <div class="form-group">
+            <label id="nameofsession" for="name"> NAME OF SESSION: </label>
+            <br />
+            <input
+              placeholder="Name of the session here.."
+              size="50"
+              type="text"
+              name="session_name"
+              id="name"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="time">Select time intervall for session</label> <br />
+            <select class="form-control" id="time" name="session_time">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="s_brief">Session brief</label> <br />
+            <textarea
+              class="form-control"
+              name="session_brief"
+              id="s_brief"
+              rows="4"
+              placeholder="Write session brief here.."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="email_list">Invite list</label> <br />
+            <textarea
+              class="form-control"
+              name="email_list"
+              id="email_list"
+              rows="3"
+              placeholder="Send link to email here.."
+            ></textarea>
+          </div>
+          <input
+            id="submit-button"
+            class="btn btn-primary btn-lg"
+            type="submit"
+            value="Start session"
+          />
+        </form>
+      </div>
+    </div>
+    <div id="img-div">
+      <img
+        src="https://cdn.glitch.com/a1887b2c-df5e-4f4c-b470-85e5f90a00e2%2FRocketman-01.png?v=1574957107480"
+        alt="imgage of lightbulb"
+      />
+    </div>
+  </div>
+</body>
+
+<% include footer %>

@@ -1,0 +1,85 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="loading.css">
+    </head>
+<body>
+  <div class="body">
+    <span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="base">
+      <span></span>
+      <div class="face"></div>
+    </div>
+  </div>
+  <div class="longfazers">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+  <h1>Setting up your session</h1>
+  <form
+    name="form1"
+    method="POST"
+    action="/session"
+    class="form"
+    style="display: none"
+  >
+    <div class="form-group">
+      <label for="name"> Name of session: </label> <br />
+      <input
+        type="text"
+        name="session_name"
+        id="name"
+        value="<%= session_name %>"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="time">Select time intervall for session</label> <br />
+      <select class="form-control" id="time" name="session_time">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="s_brief">Session brief</label> <br />
+      <textarea
+        class="form-control"
+        name="session_brief"
+        id="s_brief"
+        rows="4"
+        placeholder="Write session brief here.."
+      >
+<%= session_brief %></textarea
+      >
+    </div>
+    <div class="form-group">
+      <label for="email_list">Invite list</label> <br />
+      <textarea
+        class="form-control"
+        name="email_list"
+        id="email_list"
+        rows="3"
+        placeholder="Send link to email here.."
+      ></textarea>
+    </div>
+    <button id="load_btn" class="btn btn-primary btn-lg" type="submit" value="Start session">
+  </form>
+
+  <script>
+      setTimeout(function(){
+          document.getElementById("load_btn").click();
+      }, 2000);
+  </script>
+</body>
+</html>
+<% include footer %>
